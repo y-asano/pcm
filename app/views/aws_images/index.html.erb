@@ -1,0 +1,35 @@
+<h1>Listing aws_images</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Image no</th>
+      <th>Image id</th>
+      <th>Kernel id</th>
+      <th>Ramdisk id</th>
+      <th>Instance types</th>
+      <th>Ebs image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aws_images.each do |aws_image| %>
+      <tr>
+        <td><%= aws_image.IMAGE_NO %></td>
+        <td><%= aws_image.IMAGE_ID %></td>
+        <td><%= aws_image.KERNEL_ID %></td>
+        <td><%= aws_image.RAMDISK_ID %></td>
+        <td><%= aws_image.INSTANCE_TYPES %></td>
+        <td><%= aws_image.EBS_IMAGE %></td>
+        <td><%= link_to 'Show', aws_image %></td>
+        <td><%= link_to 'Edit', edit_aws_image_path(aws_image) %></td>
+        <td><%= link_to 'Destroy', aws_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aws image', new_aws_image_path %>

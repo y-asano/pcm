@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Platform no:</strong>
+  <%= @platform.PLATFORM_NO %>
+</p>
+
+<p>
+  <strong>Platform name:</strong>
+  <%= @platform.PLATFORM_NAME %>
+</p>
+
+<p>
+  <strong>Platform name disp:</strong>
+  <%= @platform.PLATFORM_NAME_DISP %>
+</p>
+
+<p>
+  <strong>Platform simplename disp:</strong>
+  <%= @platform.PLATFORM_SIMPLENAME_DISP %>
+</p>
+
+<p>
+  <strong>Internal:</strong>
+  <%= @platform.INTERNAL %>
+</p>
+
+<p>
+  <strong>Proxy:</strong>
+  <%= @platform.PROXY %>
+</p>
+
+<p>
+  <strong>Platform type:</strong>
+  <%= @platform.PLATFORM_TYPE %>
+</p>
+
+<p>
+  <strong>Selectable:</strong>
+  <%= @platform.SELECTABLE %>
+</p>
+
+<%= link_to 'Edit', edit_platform_path(@platform) %> |
+<%= link_to 'Back', platforms_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User no:</strong>
+  <%= @aws_certificate.USER_NO %>
+</p>
+
+<p>
+  <strong>Platform no:</strong>
+  <%= @aws_certificate.PLATFORM_NO %>
+</p>
+
+<p>
+  <strong>Aws access id:</strong>
+  <%= @aws_certificate.AWS_ACCESS_ID %>
+</p>
+
+<p>
+  <strong>Aws secret key:</strong>
+  <%= @aws_certificate.AWS_SECRET_KEY %>
+</p>
+
+<p>
+  <strong>Def keypair:</strong>
+  <%= @aws_certificate.DEF_KEYPAIR %>
+</p>
+
+<p>
+  <strong>Def subnet:</strong>
+  <%= @aws_certificate.DEF_SUBNET %>
+</p>
+
+<p>
+  <strong>Def lb subnet:</strong>
+  <%= @aws_certificate.DEF_LB_SUBNET %>
+</p>
+
+<%= link_to 'Edit', edit_aws_certificate_path(@aws_certificate) %> |
+<%= link_to 'Back', aws_certificates_path %>

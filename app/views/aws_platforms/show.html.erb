@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Platform no:</strong>
+  <%= @aws_platform.PLATFORM_NO %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @aws_platform.HOST %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @aws_platform.PORT %>
+</p>
+
+<p>
+  <strong>Secure:</strong>
+  <%= @aws_platform.SECURE %>
+</p>
+
+<p>
+  <strong>Euca:</strong>
+  <%= @aws_platform.EUCA %>
+</p>
+
+<p>
+  <strong>Vpc:</strong>
+  <%= @aws_platform.VPC %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @aws_platform.REGION %>
+</p>
+
+<p>
+  <strong>Availability zone:</strong>
+  <%= @aws_platform.AVAILABILITY_ZONE %>
+</p>
+
+<p>
+  <strong>Vpc id:</strong>
+  <%= @aws_platform.VPC_ID %>
+</p>
+
+<%= link_to 'Edit', edit_aws_platform_path(@aws_platform) %> |
+<%= link_to 'Back', aws_platforms_path %>

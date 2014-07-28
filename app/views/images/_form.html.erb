@@ -1,0 +1,53 @@
+<%= form_for(@image) do |f| %>
+  <% if @image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
+
+      <ul>
+      <% @image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IMAGE_NO %><br>
+    <%= f.number_field :IMAGE_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :PLATFORM_NO %><br>
+    <%= f.number_field :PLATFORM_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :IMAGE_NAME %><br>
+    <%= f.text_field :IMAGE_NAME %>
+  </div>
+  <div class="field">
+    <%= f.label :IMAGE_NAME_DISP %><br>
+    <%= f.text_field :IMAGE_NAME_DISP %>
+  </div>
+  <div class="field">
+    <%= f.label :OS %><br>
+    <%= f.text_field :OS %>
+  </div>
+  <div class="field">
+    <%= f.label :OS_DISP %><br>
+    <%= f.text_field :OS_DISP %>
+  </div>
+  <div class="field">
+    <%= f.label :SELECTABLE %><br>
+    <%= f.check_box :SELECTABLE %>
+  </div>
+  <div class="field">
+    <%= f.label :COMPONENT_TYPE_NOS %><br>
+    <%= f.text_field :COMPONENT_TYPE_NOS %>
+  </div>
+  <div class="field">
+    <%= f.label :ZABBIX_TEMPLATE %><br>
+    <%= f.text_field :ZABBIX_TEMPLATE %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

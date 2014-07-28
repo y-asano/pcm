@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image no:</strong>
+  <%= @aws_image.IMAGE_NO %>
+</p>
+
+<p>
+  <strong>Image id:</strong>
+  <%= @aws_image.IMAGE_ID %>
+</p>
+
+<p>
+  <strong>Kernel id:</strong>
+  <%= @aws_image.KERNEL_ID %>
+</p>
+
+<p>
+  <strong>Ramdisk id:</strong>
+  <%= @aws_image.RAMDISK_ID %>
+</p>
+
+<p>
+  <strong>Instance types:</strong>
+  <%= @aws_image.INSTANCE_TYPES %>
+</p>
+
+<p>
+  <strong>Ebs image:</strong>
+  <%= @aws_image.EBS_IMAGE %>
+</p>
+
+<%= link_to 'Edit', edit_aws_image_path(@aws_image) %> |
+<%= link_to 'Back', aws_images_path %>

@@ -1,0 +1,35 @@
+<h1>Listing aws_certificates</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>User no</th>
+      <th>Platform no</th>
+      <th>Aws access id</th>
+      <th>Def keypair</th>
+      <th>Def subnet</th>
+      <th>Def lb subnet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aws_certificates.each do |aws_certificate| %>
+      <tr>
+        <td><%= aws_certificate.USER_NO %></td>
+        <td><%= aws_certificate.PLATFORM_NO %></td>
+        <td><%= aws_certificate.AWS_ACCESS_ID %></td>
+        <td><%= aws_certificate.DEF_KEYPAIR %></td>
+        <td><%= aws_certificate.DEF_SUBNET %></td>
+        <td><%= aws_certificate.DEF_LB_SUBNET %></td>
+        <td><%= link_to 'Show', aws_certificate %></td>
+        <td><%= link_to 'Edit', edit_aws_certificate_path(aws_certificate) %></td>
+        <td><%= link_to 'Destroy', aws_certificate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aws certificate', new_aws_certificate_path %>

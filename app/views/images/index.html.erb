@@ -1,0 +1,41 @@
+<h1>Listing images</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Image no</th>
+      <th>Platform no</th>
+      <th>Image name</th>
+      <th>Image name disp</th>
+      <th>Os</th>
+      <th>Os disp</th>
+      <th>Selectable</th>
+      <th>Component type nos</th>
+      <th>Zabbix template</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <td><%= image.IMAGE_NO %></td>
+        <td><%= image.PLATFORM_NO %></td>
+        <td><%= image.IMAGE_NAME %></td>
+        <td><%= image.IMAGE_NAME_DISP %></td>
+        <td><%= image.OS %></td>
+        <td><%= image.OS_DISP %></td>
+        <td><%= image.SELECTABLE %></td>
+        <td><%= image.COMPONENT_TYPE_NOS %></td>
+        <td><%= image.ZABBIX_TEMPLATE %></td>
+        <td><%= link_to 'Show', image %></td>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image', new_image_path %>

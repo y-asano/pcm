@@ -1,0 +1,53 @@
+<%= form_for(@aws_platform) do |f| %>
+  <% if @aws_platform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aws_platform.errors.count, "error") %> prohibited this aws_platform from being saved:</h2>
+
+      <ul>
+      <% @aws_platform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :PLATFORM_NO %><br>
+    <%= f.number_field :PLATFORM_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :HOST %><br>
+    <%= f.text_field :HOST %>
+  </div>
+  <div class="field">
+    <%= f.label :PORT %><br>
+    <%= f.number_field :PORT %>
+  </div>
+  <div class="field">
+    <%= f.label :SECURE %><br>
+    <%= f.check_box :SECURE %>
+  </div>
+  <div class="field">
+    <%= f.label :EUCA %><br>
+    <%= f.check_box :EUCA %>
+  </div>
+  <div class="field">
+    <%= f.label :VPC %><br>
+    <%= f.check_box :VPC %>
+  </div>
+  <div class="field">
+    <%= f.label :REGION %><br>
+    <%= f.text_field :REGION %>
+  </div>
+  <div class="field">
+    <%= f.label :AVAILABILITY_ZONE %><br>
+    <%= f.text_field :AVAILABILITY_ZONE %>
+  </div>
+  <div class="field">
+    <%= f.label :VPC_ID %><br>
+    <%= f.text_field :VPC_ID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

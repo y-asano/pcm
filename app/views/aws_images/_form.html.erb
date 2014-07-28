@@ -1,0 +1,41 @@
+<%= form_for(@aws_image) do |f| %>
+  <% if @aws_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aws_image.errors.count, "error") %> prohibited this aws_image from being saved:</h2>
+
+      <ul>
+      <% @aws_image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :IMAGE_NO %><br>
+    <%= f.number_field :IMAGE_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :IMAGE_ID %><br>
+    <%= f.text_field :IMAGE_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :KERNEL_ID %><br>
+    <%= f.text_field :KERNEL_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :RAMDISK_ID %><br>
+    <%= f.text_field :RAMDISK_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :INSTANCE_TYPES %><br>
+    <%= f.text_field :INSTANCE_TYPES %>
+  </div>
+  <div class="field">
+    <%= f.label :EBS_IMAGE %><br>
+    <%= f.check_box :EBS_IMAGE %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

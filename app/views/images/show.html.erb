@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image no:</strong>
+  <%= @image.IMAGE_NO %>
+</p>
+
+<p>
+  <strong>Platform no:</strong>
+  <%= @image.PLATFORM_NO %>
+</p>
+
+<p>
+  <strong>Image name:</strong>
+  <%= @image.IMAGE_NAME %>
+</p>
+
+<p>
+  <strong>Image name disp:</strong>
+  <%= @image.IMAGE_NAME_DISP %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @image.OS %>
+</p>
+
+<p>
+  <strong>Os disp:</strong>
+  <%= @image.OS_DISP %>
+</p>
+
+<p>
+  <strong>Selectable:</strong>
+  <%= @image.SELECTABLE %>
+</p>
+
+<p>
+  <strong>Component type nos:</strong>
+  <%= @image.COMPONENT_TYPE_NOS %>
+</p>
+
+<p>
+  <strong>Zabbix template:</strong>
+  <%= @image.ZABBIX_TEMPLATE %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

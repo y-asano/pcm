@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :users
+
+  resources :aws_images
+
+  resources :aws_certificates
+
+  resources :images
+
+  resources :aws_platforms
+
+  resources :platforms
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

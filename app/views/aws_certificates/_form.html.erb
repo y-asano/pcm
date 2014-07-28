@@ -1,0 +1,45 @@
+<%= form_for(@aws_certificate) do |f| %>
+  <% if @aws_certificate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aws_certificate.errors.count, "error") %> prohibited this aws_certificate from being saved:</h2>
+
+      <ul>
+      <% @aws_certificate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :USER_NO %><br>
+    <%= f.number_field :USER_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :PLATFORM_NO %><br>
+    <%= f.number_field :PLATFORM_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :AWS_ACCESS_ID %><br>
+    <%= f.text_field :AWS_ACCESS_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :AWS_SECRET_KEY %><br>
+    <%= f.text_field :AWS_SECRET_KEY %>
+  </div>
+  <div class="field">
+    <%= f.label :DEF_KEYPAIR %><br>
+    <%= f.text_field :DEF_KEYPAIR %>
+  </div>
+  <div class="field">
+    <%= f.label :DEF_SUBNET %><br>
+    <%= f.text_field :DEF_SUBNET %>
+  </div>
+  <div class="field">
+    <%= f.label :DEF_LB_SUBNET %><br>
+    <%= f.text_field :DEF_LB_SUBNET %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

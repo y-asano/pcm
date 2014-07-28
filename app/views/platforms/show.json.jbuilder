@@ -1,0 +1,1 @@
+json.extract! @platform, :id, :PLATFORM_NO, :PLATFORM_NAME, :PLATFORM_NAME_DISP, :PLATFORM_SIMPLENAME_DISP, :INTERNAL, :PROXY, :PLATFORM_TYPE, :SELECTABLE, :created_at, :updated_at
