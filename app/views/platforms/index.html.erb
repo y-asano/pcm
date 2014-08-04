@@ -1,24 +1,25 @@
-<h1>Platform一覧</h1>
-
-<table class="table table-striped table-hover ">
+<%- model_class = Platform -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Platform no</th>
-      <th>Platform name</th>
-      <th>Platform name disp</th>
-      <th>Platform simplename disp</th>
-      <th>Internal</th>
-      <th>Proxy</th>
-      <th>Platform type</th>
-      <th>Selectable</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_NO) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_NAME) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_NAME_DISP) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_SIMPLENAME_DISP) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_INTERNAL) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_PROXY) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_TYPE) %></th>
+      <th><%= model_class.human_attribute_name(:SELECTABLE) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @platforms.each do |platform| %>
       <tr>
-        <td><%= platform.PLATFORM_NO %></td>
+        <td><%= link_to platform.PLATFORM_NO, platform_path(platform) %></td>
         <td><%= platform.PLATFORM_NAME %></td>
         <td><%= platform.PLATFORM_NAME_DISP %></td>
         <td><%= platform.PLATFORM_SIMPLENAME_DISP %></td>
@@ -26,14 +27,21 @@
         <td><%= platform.PROXY %></td>
         <td><%= platform.PLATFORM_TYPE %></td>
         <td><%= platform.SELECTABLE %></td>
-        <td><%= link_to 'Show', platform %></td>
-        <td><%= link_to 'Edit', edit_platform_path(platform) %></td>
-        <td><%= link_to 'Destroy', platform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_platform_path(platform), :class => 'btn btn-primary btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      platform_path(platform),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-danger btn-xs' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_platform_path,
+	    :class => 'btn btn-primary' %>
 
-<%= link_to 'Create Platform', new_platform_path ,class:"btn btn-info" %>

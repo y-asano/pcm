@@ -1,0 +1,28 @@
+ja:
+  activerecord:
+    models:
+      platform: 'プラットフォーム'
+    attributes:
+      platform:
+        PLATFORM_NO: "Platform番号"
+        PLATFORM_NAME: "Platform名"
+        PLATFORM_NAME_DISP: "表示名"
+        PLATFORM_SIMPLENAME_DISP: "短縮表示名"
+        PLATFORM_INTERNAL: "接続タイプ"
+        PLATFORM_PROXY: "Proxy接続"
+        PLATFORM_TYPE: "Platformタイプ"
+        SELECTABLE: "有効/無効"
+
+  platforms:
+    index:
+      title:  'プラットフォーム管理'
+    edit:
+      title:  'プラットフォーム修正'
+    new:
+      title:  'プラットフォームの新規作成'
+    show:
+      title:  '詳細情報'
+    index:
+      title:  'プラットフォーム管理'
+
+
