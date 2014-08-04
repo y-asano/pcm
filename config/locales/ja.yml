@@ -15,13 +15,13 @@ ja:
         SELECTABLE: "有効/無効"
       aws_platform:
         PLATFORM_NO: "Platform番号"
-        HOST: "接続先ホスト"
-        PORT: "接続先Port"
-        SECURE: "接続プロトコル"
-        EUCA: "Eucalyputs"
+        HOST: "接続ホスト"
+        PORT: "接続Port"
+        SECURE: "Protocol"
+        EUCA: "Eucaオプション"
         VPC: "VPC接続"
-        REGION: "Region情報"
-        AVAILABILITY_ZONE: "AZ情報"
+        REGION: "Region設定"
+        AVAILABILITY_ZONE: "AZ設定"
         VPC_ID: "VPC-ID"
 
   platforms:
@@ -33,7 +33,14 @@ ja:
       title:  'プラットフォームの新規作成'
     show:
       title:  '詳細情報'
-    index:
-      title:  'プラットフォーム管理'
 
+  aws_platforms:
+    index:
+      title:  'AWSプラットフォーム管理'
+    edit:
+      title:  'AWSプラットフォーム修正'
+    new:
+      title:  'AWSプラットフォームの新規作成'
+    show:
+      title:  '詳細情報'
 
