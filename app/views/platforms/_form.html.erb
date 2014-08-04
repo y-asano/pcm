@@ -10,28 +10,28 @@
   </div>
 
   <div class="form-group">
-    <div class='col-lg-4 control-label'>Platform名</div>
+	  <%= f.label :PLATFORM_NAME, :class => 'col-lg-4 control-label' %>
 	  <div class="col-lg-8">
 		  <%= f.text_field :PLATFORM_NAME, :class => 'form-control' %>
 	  </div>
   </div>
 
   <div class="form-group">
-    <div class='col-lg-4 control-label'>表示名</div>
+	  <%= f.label :PLATFORM_NAME_DISP, :class => 'col-lg-4 control-label' %>
 	  <div class="col-lg-8">
 		  <%= f.text_field :PLATFORM_NAME_DISP, :class => 'form-control' %>
 	  </div>
   </div>
 
   <div class="form-group">
-    <div class='col-lg-4 control-label'>短縮表示名</div>
+	  <%= f.label :PLATFORM_SIMPLENAME_DISP, :class => 'col-lg-4 control-label' %>
 	  <div class="col-lg-8">
 		  <%= f.text_field :PLATFORM_SIMPLENAME_DISP, :class => 'form-control' %>
 	  </div>
   </div>
 
   <div class="form-group">
-    <div class='col-lg-4 control-label'>接続タイプ </div>
+	  <%= f.label :PLATFORM_INTERNAL, :class => 'col-lg-4 control-label' %>
     <div class="col-lg-8">
 	    <div class="checkbox">
 		    <%= f.check_box :INTERNAL %> 
@@ -41,7 +41,7 @@
   </div>
 
   <div class="form-group">
-    <div class="col-lg-4 control-label">Proxy接続 </div>
+	  <%= f.label :PLATFORM_PROXY, :class => 'col-lg-4 control-label' %>
     <div class="col-lg-8">
 	    <div class="checkbox">
 		    <%= f.check_box :PROXY %> 
@@ -51,14 +51,14 @@
   </div>
 
   <div class="form-group">
-    <div class='col-lg-4 control-label'>Platformタイプ </div>
+	  <%= f.label :PLATFORM_TYPE, :class => 'col-lg-4 control-label' %>
 	  <div class="col-lg-8">
 		  <%= f.text_field :PLATFORM_TYPE, :class => 'form-control' %>
 	  </div>
   </div>
 
   <div class="form-group">
-    <div class="col-lg-4 control-label">Platformの有効化</div>
+	  <%= f.label :SELECTABLE, :class => 'col-lg-4 control-label' %>
     <div class="col-lg-8">
 	    <div class="checkbox">
               <%= f.check_box :SELECTABLE %>

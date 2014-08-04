@@ -5,14 +5,14 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Platform no</th>
-      <th>Platform名</th>
-      <th>表示名</th>
-      <th>短縮表示名</th>
-      <th>接続タイプ</th>
-      <th>Proxy接続</th>
-      <th>Platfromタイプ</th>
-      <th>有効/無効</th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_NO) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_NAME) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_NAME_DISP) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_SIMPLENAME_DISP) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_INTERNAL) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_PROXY) %></th>
+      <th><%= model_class.human_attribute_name(:PLATFORM_TYPE) %></th>
+      <th><%= model_class.human_attribute_name(:SELECTABLE) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
