@@ -1,44 +1,79 @@
-<%= form_for @aws_platform, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="form-group">
-    <%= f.label :PLATFORM_NO, :class => 'control-label' %>
-    <%= f.number_field :PLATFORM_NO, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :HOST, :class => 'control-label' %>
-    <%= f.text_field :HOST, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :PORT, :class => 'control-label' %>
-    <%= f.number_field :PORT, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :SECURE, :class => 'control-label' %>
-    <%= f.check_box :SECURE, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :EUCA, :class => 'control-label' %>
-    <%= f.check_box :EUCA, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :VPC, :class => 'control-label' %>
-    <%= f.check_box :VPC, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :REGION, :class => 'control-label' %>
-    <%= f.text_field :REGION, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :AVAILABILITY_ZONE, :class => 'control-label' %>
-    <%= f.text_field :AVAILABILITY_ZONE, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :VPC_ID, :class => 'control-label' %>
-    <%= f.text_field :VPC_ID, :class => 'form-control' %>
-  </div>
+<div class="col-lg-6">
+<div class="well bs-component">
+	<%= form_for @aws_platform, :html => { :class => 'form-horizontal' } do |f| %>
+	<fieldset>
+  		<div class="form-group">
+			<%= f.label :PLATFORM_NO, :class => 'col-lg-4 control-label' %>
+			<div class="col-lg-8">
+				<%= f.number_field :PLATFORM_NO, :class => 'form-control' %>
+			</div>
+  		</div>
+  		<div class="form-group">
+    			<%= f.label :HOST, :class => 'col-lg-4 control-label' %>
+			<div class="col-lg-8">
+				<%= f.text_field :HOST, :class => 'form-control' %>
+			</div>
+  		</div>
+  		<div class="form-group">
+    			<%= f.label :PORT, :class => 'col-lg-4 control-label' %>
+			<div class="col-lg-8">
+				<%= f.number_field :PORT, :class => 'form-control' %>
+			</div>
+  		</div>
+  		<div class="form-group">
+			<%= f.label :SECURE, :class => 'col-lg-4 control-label' %>
+			<div class="col-lg-8">
+				<div class = "checkbox">
+					<%= f.check_box :SECURE %>
+					<%= f.label :SECURE, 'API呼び出しにHTTPSを利用する' %>
+				</div>
+			</div>
+  		</div>
+  		<div class="form-group">
+    			<%= f.label :EUCA, :class => 'col-lg-4 control-label' %>
+			<div class="col-lg-8">
+				<div class = "checkbox">
+					<%= f.check_box :EUCA %>
+					<%= f.label :EUCA, 'Eucalyptus互換の処理を行う' %>
+				</div>
+			</div>
+  		</div>
+  		<div class="form-group">
+    			<%= f.label :VPC, :class => 'col-lg-4 control-label' %>
+			<div class="col-lg-8">
+				<div class = "checkbox">
+					<%= f.check_box :VPC %>
+					<%= f.label :VPC, 'VPCを利用する' %>
+				</div>
+			</div>
+  		</div>
+  		<div class="form-group">
+    			<%= f.label :REGION, :class => 'col-lg-4 control-label' %>
+			<div class="col-lg-8">
+				<%= f.text_field :REGION, :class => 'form-control' %>
+			</div>
+  		</div>
+  		<div class="form-group">
+			<%= f.label :AVAILABILITY_ZONE, :class => 'col-lg-4 control-label' %>
+			<div class="col-lg-8">
+				<%= f.text_field :AVAILABILITY_ZONE, :class => 'form-control' %>
+			</div>
+  		</div>
+  		<div class="form-group">
+			<%= f.label :VPC_ID, :class => 'col-lg-4 control-label' %>
+			<div class = "col-lg-8">
+				<%= f.text_field :VPC_ID, :class => 'form-control' %>
+			</div>
+  		</div>
 
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                aws_platforms_path, :class => 'btn' %>
-  </div>
-<% end %>
+		<div class="form-actions">
+			<div class='col-lg-8 col-lg-offset-4'>
+    				<%= f.submit nil, :class => 'btn btn-primary' %>
+    				<%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+					aws_platforms_path, :class => 'btn' %>
+			</div>
+  		</div>
+	<% end %>
+	</fieldset>
+</div>
+</div>

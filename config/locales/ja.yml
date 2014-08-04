@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       platform: 'プラットフォーム'
+      aws_platform: 'AWSプラットフォーム'
     attributes:
       platform:
         PLATFORM_NO: "Platform番号"
@@ -12,6 +13,16 @@ ja:
         PLATFORM_PROXY: "Proxy接続"
         PLATFORM_TYPE: "Platformタイプ"
         SELECTABLE: "有効/無効"
+      aws_platform:
+        PLATFORM_NO: "Platform番号"
+        HOST: "接続先ホスト"
+        PORT: "接続先Port"
+        SECURE: "接続プロトコル"
+        EUCA: "Eucalyputs"
+        VPC: "VPC接続"
+        REGION: "Region情報"
+        AVAILABILITY_ZONE: "AZ情報"
+        VPC_ID: "VPC-ID"
 
   platforms:
     index:
