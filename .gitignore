@@ -25,4 +25,4 @@ config/secrets.yml
 
 config/database.yml
 .rubocop.yml
-.swp
+*.swp
