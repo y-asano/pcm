@@ -5,7 +5,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:PLATFORM_NO) %></th>
       <th><%= model_class.human_attribute_name(:HOST) %></th>
       <th><%= model_class.human_attribute_name(:PORT) %></th>
@@ -15,15 +14,13 @@
       <th><%= model_class.human_attribute_name(:REGION) %></th>
       <th><%= model_class.human_attribute_name(:AVAILABILITY_ZONE) %></th>
       <th><%= model_class.human_attribute_name(:VPC_ID) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @aws_platforms.each do |aws_platform| %>
       <tr>
-        <td><%= link_to aws_platform.id, aws_platform_path(aws_platform) %></td>
-        <td><%= aws_platform.PLATFORM_NO %></td>
+        <td><%= link_to aws_platform.PLATFORM_NO, aws_platform_path(aws_platform) %></td>
         <td><%= aws_platform.HOST %></td>
         <td><%= aws_platform.PORT %></td>
         <td><%= aws_platform.SECURE %></td>
@@ -32,7 +29,6 @@
         <td><%= aws_platform.REGION %></td>
         <td><%= aws_platform.AVAILABILITY_ZONE %></td>
         <td><%= aws_platform.VPC_ID %></td>
-        <td><%=l aws_platform.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_aws_platform_path(aws_platform), :class => 'btn btn-primary btn-xs' %>

@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       platform: 'プラットフォーム'
+      aws_platform: 'AWSプラットフォーム'
     attributes:
       platform:
         PLATFORM_NO: "Platform番号"
@@ -12,6 +13,16 @@ ja:
         PLATFORM_PROXY: "Proxy接続"
         PLATFORM_TYPE: "Platformタイプ"
         SELECTABLE: "有効/無効"
+      aws_platform:
+        PLATFORM_NO: "Platform番号"
+        HOST: "接続ホスト"
+        PORT: "接続Port"
+        SECURE: "Protocol"
+        EUCA: "Eucaオプション"
+        VPC: "VPC接続"
+        REGION: "Region設定"
+        AVAILABILITY_ZONE: "AZ設定"
+        VPC_ID: "VPC-ID"
 
   platforms:
     index:
@@ -22,7 +33,14 @@ ja:
       title:  'プラットフォームの新規作成'
     show:
       title:  '詳細情報'
-    index:
-      title:  'プラットフォーム管理'
 
+  aws_platforms:
+    index:
+      title:  'AWSプラットフォーム管理'
+    edit:
+      title:  'AWSプラットフォーム修正'
+    new:
+      title:  'AWSプラットフォームの新規作成'
+    show:
+      title:  '詳細情報'
 
